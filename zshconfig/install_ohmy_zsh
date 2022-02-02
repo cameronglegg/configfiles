@@ -1,0 +1,20 @@
+#!bin/bash
+
+# Update/Upgrade
+sudo apt update -y && sudo apt upgrade -y
+
+# Install ZSH
+sudo apt install zsh -y
+zsh --version
+
+#Set Shell
+echo $SHELL
+chsh -s /usr/bin/zsh
+echo $SHELL
+
+# Install oh-my-zsh
+sudo apt update -y && sudo apt upgrade -y
+sudo apt install git-core curl fonts-powerline
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#Add Custom dotfiles
